@@ -43,7 +43,7 @@ class ListManager {
     }
     
     class func getAirports(completeion: ((Bool , String? , [Airport]? ) -> Void)?)  {
-        let url = Constants.URLs.getCountries
+        let url = Constants.URLs.getAirports
         let tag = "airports"
         NetworkManager.get(url,tag: tag ) { ( result) in
             
