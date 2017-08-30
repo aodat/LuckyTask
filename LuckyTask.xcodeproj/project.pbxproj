@@ -15,6 +15,13 @@
 		FA6334171F573CD500C46AAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6334151F573CD500C46AAA /* LaunchScreen.storyboard */; };
 		FA63341F1F573FD100C46AAA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA63341E1F573FD100C46AAA /* NetworkManager.swift */; };
 		FA6334211F5747D800C46AAA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6334201F5747D800C46AAA /* Constants.swift */; };
+		FA6334231F574BFF00C46AAA /* ListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6334221F574BFF00C46AAA /* ListManager.swift */; };
+		FA6334251F574CC800C46AAA /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6334241F574CC800C46AAA /* Country.swift */; };
+		FA6334271F574D1B00C46AAA /* RootModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6334261F574D1B00C46AAA /* RootModel.swift */; };
+		FA63342B1F5754DA00C46AAA /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA63342A1F5754DA00C46AAA /* Airport.swift */; };
+		FA63342D1F575AAD00C46AAA /* CountriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA63342C1F575AAD00C46AAA /* CountriesTableViewController.swift */; };
+		FA63342F1F575B8F00C46AAA /* ListCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA63342E1F575B8F00C46AAA /* ListCustomCell.swift */; };
+		FA6334351F57644C00C46AAA /* AirportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6334341F57644C00C46AAA /* AirportTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +37,13 @@
 		FA6334181F573CD500C46AAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA63341E1F573FD100C46AAA /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FA6334201F5747D800C46AAA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FA6334221F574BFF00C46AAA /* ListManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListManager.swift; sourceTree = "<group>"; };
+		FA6334241F574CC800C46AAA /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		FA6334261F574D1B00C46AAA /* RootModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootModel.swift; sourceTree = "<group>"; };
+		FA63342A1F5754DA00C46AAA /* Airport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
+		FA63342C1F575AAD00C46AAA /* CountriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesTableViewController.swift; sourceTree = "<group>"; };
+		FA63342E1F575B8F00C46AAA /* ListCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCustomCell.swift; sourceTree = "<group>"; };
+		FA6334341F57644C00C46AAA /* AirportTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +104,13 @@
 				FA6334181F573CD500C46AAA /* Info.plist */,
 				FA63341E1F573FD100C46AAA /* NetworkManager.swift */,
 				FA6334201F5747D800C46AAA /* Constants.swift */,
+				FA6334221F574BFF00C46AAA /* ListManager.swift */,
+				FA6334241F574CC800C46AAA /* Country.swift */,
+				FA6334261F574D1B00C46AAA /* RootModel.swift */,
+				FA63342A1F5754DA00C46AAA /* Airport.swift */,
+				FA63342C1F575AAD00C46AAA /* CountriesTableViewController.swift */,
+				FA63342E1F575B8F00C46AAA /* ListCustomCell.swift */,
+				FA6334341F57644C00C46AAA /* AirportTableViewController.swift */,
 			);
 			path = LuckyTask;
 			sourceTree = "<group>";
@@ -218,9 +239,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA63341F1F573FD100C46AAA /* NetworkManager.swift in Sources */,
+				FA63342F1F575B8F00C46AAA /* ListCustomCell.swift in Sources */,
+				FA63342B1F5754DA00C46AAA /* Airport.swift in Sources */,
 				FA63340F1F573CD500C46AAA /* ViewController.swift in Sources */,
+				FA6334271F574D1B00C46AAA /* RootModel.swift in Sources */,
+				FA63342D1F575AAD00C46AAA /* CountriesTableViewController.swift in Sources */,
 				FA63340D1F573CD500C46AAA /* AppDelegate.swift in Sources */,
+				FA6334231F574BFF00C46AAA /* ListManager.swift in Sources */,
+				FA6334251F574CC800C46AAA /* Country.swift in Sources */,
 				FA6334211F5747D800C46AAA /* Constants.swift in Sources */,
+				FA6334351F57644C00C46AAA /* AirportTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
