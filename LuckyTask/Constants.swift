@@ -21,11 +21,11 @@ struct Constants {
     struct URLs {
         
         static var getCountries:String{
-            get{ return  Constants.baseUrl + "content/countries"}
+            get{ return  Constants.baseUrl + "/content/countries"}
         }
         
         static var getAirports:String{
-            get{ return  Constants.baseUrl + "search/airports"}
+            get{ return  Constants.baseUrl + "/search/airports"}
         }
         
     }
