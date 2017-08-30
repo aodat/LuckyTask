@@ -96,23 +96,71 @@
 		FA63340B1F573CD500C46AAA /* LuckyTask */ = {
 			isa = PBXGroup;
 			children = (
+				FA6334361F576CAB00C46AAA /* MVC */,
 				FA63340C1F573CD500C46AAA /* AppDelegate.swift */,
-				FA63340E1F573CD500C46AAA /* ViewController.swift */,
-				FA6334101F573CD500C46AAA /* Main.storyboard */,
 				FA6334131F573CD500C46AAA /* Assets.xcassets */,
-				FA6334151F573CD500C46AAA /* LaunchScreen.storyboard */,
 				FA6334181F573CD500C46AAA /* Info.plist */,
+			);
+			path = LuckyTask;
+			sourceTree = "<group>";
+		};
+		FA6334361F576CAB00C46AAA /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				FA63343A1F576CC300C46AAA /* Managers */,
+				FA6334391F576CBB00C46AAA /* Controller */,
+				FA6334381F576CB600C46AAA /* View */,
+				FA6334371F576CB100C46AAA /* Model */,
+			);
+			name = MVC;
+			sourceTree = "<group>";
+		};
+		FA6334371F576CB100C46AAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA6334261F574D1B00C46AAA /* RootModel.swift */,
+				FA6334241F574CC800C46AAA /* Country.swift */,
+				FA63342A1F5754DA00C46AAA /* Airport.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FA6334381F576CB600C46AAA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA6334151F573CD500C46AAA /* LaunchScreen.storyboard */,
+				FA6334101F573CD500C46AAA /* Main.storyboard */,
+				FA63343B1F576CE100C46AAA /* CustomCell */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FA6334391F576CBB00C46AAA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA63340E1F573CD500C46AAA /* ViewController.swift */,
+				FA63342C1F575AAD00C46AAA /* CountriesTableViewController.swift */,
+				FA6334341F57644C00C46AAA /* AirportTableViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FA63343A1F576CC300C46AAA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
 				FA63341E1F573FD100C46AAA /* NetworkManager.swift */,
 				FA6334201F5747D800C46AAA /* Constants.swift */,
 				FA6334221F574BFF00C46AAA /* ListManager.swift */,
-				FA6334241F574CC800C46AAA /* Country.swift */,
-				FA6334261F574D1B00C46AAA /* RootModel.swift */,
-				FA63342A1F5754DA00C46AAA /* Airport.swift */,
-				FA63342C1F575AAD00C46AAA /* CountriesTableViewController.swift */,
-				FA63342E1F575B8F00C46AAA /* ListCustomCell.swift */,
-				FA6334341F57644C00C46AAA /* AirportTableViewController.swift */,
 			);
-			path = LuckyTask;
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		FA63343B1F576CE100C46AAA /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA63342E1F575B8F00C46AAA /* ListCustomCell.swift */,
+			);
+			name = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
