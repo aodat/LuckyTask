@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     var showSelected = false
+    var country: Country?
+    var airport: Airport?
     
     @IBOutlet weak var selectedCountry: UILabel!
     @IBOutlet weak var selectedAirport: UILabel!
@@ -19,12 +21,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let userDefault = UserDefaults.standard
         if showSelected == true {
-            selectedCountry.text = userDefault.string(forKey: "countryName")
-            selectedAirport.text = userDefault.string(forKey: "airportName")
-            countryImage.af_setImage(withURL:URL(string: userDefault.string(forKey: "countryImage")!)!)
-            airportImage.af_setImage(withURL:URL(string: userDefault.string(forKey: "airportImage")!)!)
+            selectedCountry.text = self.country?.name
+            selectedAirport.text = self.airport?.name
+            countryImage.af_setImage(withURL:URL(string: (self.country?.thumbnailUrl!)!)!)
+            airportImage.af_setImage(withURL:URL(string: (self.airport?.thumbnailUrl!)!)!)
         }
     }
 

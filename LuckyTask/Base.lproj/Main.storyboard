@@ -119,7 +119,6 @@
                                 <connections>
                                     <outlet property="thumbnail" destination="H5b-pO-4Zq" id="0qa-H6-c2g"/>
                                     <outlet property="title" destination="iiJ-2Q-i28" id="d29-0m-WGF"/>
-                                    <segue destination="BUL-bp-XGv" kind="push" id="VdG-Hk-YdU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -129,6 +128,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Country Selection" id="uVb-q6-l4u"/>
+                    <connections>
+                        <segue destination="BUL-bp-XGv" kind="push" identifier="goAirport" id="RGK-qX-HNh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zO1-0h-pup" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,7 +198,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="an4-G1-egF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1718" y="852"/>
+            <point key="canvasLocation" x="2415" y="81"/>
         </scene>
     </scenes>
     <resources>
