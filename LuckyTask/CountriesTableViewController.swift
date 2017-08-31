@@ -13,6 +13,7 @@ import PKHUD
 class CountriesTableViewController: UITableViewController {
     
     var countries = [Country]()
+    var country:Country?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,9 +49,15 @@ class CountriesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCountry = self.countries[indexPath.row]
-        UserDefaults.standard.set(selectedCountry.name, forKey: "countryName")
-        UserDefaults.standard.set(selectedCountry.thumbnailUrl, forKey: "countryImage")
-        UserDefaults.standard.synchronize()
+        self.country = selectedCountry
+        performSegue(withIdentifier: "goAirport", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goAirport" {
+            let airportVC = segue.destination as! AirportsTableViewController
+            airportVC.selectedCountry = self.country
+        }
     }
     
 }
