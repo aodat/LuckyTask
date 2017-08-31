@@ -12,21 +12,29 @@ import PKHUD
 class AirportsTableViewController: UITableViewController {
     
     var airports = [Airport]()
+    var selectedCountry: Country?
+    var selectedAirport: Airport?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         HUD.flash(.progress)
-        ListManager.getAirports { (success, errorMsg , fetchedAirports) in
-            if let fetchedAirports = fetchedAirports {
-                self.airports = fetchedAirports
-                self.tableView?.reloadData()
-                HUD.hide()
+        
+        if let countryCode = selectedCountry?.countryCode {
+            ListManager.getAirports(countryCode: countryCode) { (success, errorMsg , fetchedAirports) in
+                self.airports.removeAll()
+                self.tableView.reloadData()
+                if let fetchedAirports = fetchedAirports {
+                    self.airports = fetchedAirports
+                    self.tableView.reloadData()
+                }
             }
+            
         }
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -46,9 +54,7 @@ class AirportsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedAirport = self.airports[indexPath.row]
-        UserDefaults.standard.set(selectedAirport.name, forKey: "airportName")
-        UserDefaults.standard.set(selectedAirport.thumbnailUrl, forKey: "airportImage")
-        UserDefaults.standard.synchronize()
+        self.selectedAirport = selectedAirport
         pushToHomeScreen()
     }
     
@@ -56,6 +62,8 @@ class AirportsTableViewController: UITableViewController {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let home = storyBoard.instantiateViewController(withIdentifier: "Home") as! ViewController
         home.showSelected = true
+        home.country = self.selectedCountry
+        home.airport = self.selectedAirport
         self.navigationController?.pushViewController(home, animated: true)
     }
     
