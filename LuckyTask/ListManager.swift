@@ -42,10 +42,12 @@ class ListManager {
         }
     }
     
-    class func getAirports(completeion: ((Bool , String? , [Airport]? ) -> Void)?)  {
+    class func getAirports(countryCode: String, completeion: ((Bool , String? , [Airport]? ) -> Void)?)  {
         let url = Constants.URLs.getAirports
         let tag = "airports"
-        NetworkManager.get(url,tag: tag ) { ( result) in
+        let param = ["country_code":countryCode]
+        
+        NetworkManager.get(url,tag: tag, params: param ) { ( result) in
             
             switch result {
             case .success(let resultRoot):
